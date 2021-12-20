@@ -30,9 +30,9 @@ namespace MedClinic
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@ namespace MedClinic
             this.saveButton = new System.Windows.Forms.Button();
             this.Upass = new System.Windows.Forms.TextBox();
             this.labeluser = new System.Windows.Forms.Label();
-            this.Phone = new System.Windows.Forms.TextBox();
+            this.Uphone = new System.Windows.Forms.TextBox();
             this.Uname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -155,7 +155,7 @@ namespace MedClinic
             this.panel2.Controls.Add(this.saveButton);
             this.panel2.Controls.Add(this.Upass);
             this.panel2.Controls.Add(this.labeluser);
-            this.panel2.Controls.Add(this.Phone);
+            this.panel2.Controls.Add(this.Uphone);
             this.panel2.Controls.Add(this.Uname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label4);
@@ -228,13 +228,13 @@ namespace MedClinic
             this.labeluser.TabIndex = 14;
             this.labeluser.Text = " Password";
             // 
-            // Phone
+            // Uphone
             // 
-            this.Phone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(135, 139);
-            this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(181, 33);
-            this.Phone.TabIndex = 13;
+            this.Uphone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uphone.Location = new System.Drawing.Point(135, 139);
+            this.Uphone.Name = "Uphone";
+            this.Uphone.Size = new System.Drawing.Size(181, 33);
+            this.Uphone.TabIndex = 13;
             // 
             // Uname
             // 
@@ -285,32 +285,32 @@ namespace MedClinic
             // 
             // UsersDataGrid
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UsersDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UsersDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.UsersDataGrid.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.UsersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UsersDataGrid.Cursor = System.Windows.Forms.Cursors.Default;
             this.UsersDataGrid.GridColor = System.Drawing.Color.White;
             this.UsersDataGrid.Location = new System.Drawing.Point(257, 250);
             this.UsersDataGrid.Name = "UsersDataGrid";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.UsersDataGrid.RowHeadersVisible = false;
             this.UsersDataGrid.RowHeadersWidth = 120;
             this.UsersDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -361,7 +361,7 @@ namespace MedClinic
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Upass;
         private System.Windows.Forms.Label labeluser;
-        private System.Windows.Forms.TextBox Phone;
+        private System.Windows.Forms.TextBox Uphone;
         private System.Windows.Forms.TextBox Uname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;

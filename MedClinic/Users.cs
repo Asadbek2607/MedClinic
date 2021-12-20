@@ -21,7 +21,7 @@ namespace MedClinic
         // SAVE BUTTON
         private void saveButton_Click_1(object sender, EventArgs e)
         {
-            string query = "insert into UserTable values('" + Uname.Text + "', '" + Upass.Text + "', '" + Phone.Text + "')";
+            string query = "insert into UserTable values('" + Uname.Text + "', '" + Upass.Text + "', '" + Uphone.Text + "')";
             MyUsers Usr = new MyUsers();
             try
             {
@@ -50,7 +50,9 @@ namespace MedClinic
             {
                 try
                 {
-                    string query = "Update UserTable set Uname ='" + Uname.Text + "',Upass ='" + Upass.Text + "',Phone ='" + Phone.Text + "' where Uid=" + key + "";
+                    string query = "Update UserTable set Uname ='" + Uname.Text + "'," +
+                        "Upass ='" + Upass.Text + "'," +
+                        "Uphone ='" + Uphone.Text + "' where Uid=" + key + "";
 
                     Usr.DeleteUser(query);
                     MessageBox.Show("User Successfully Updated");
@@ -85,7 +87,7 @@ namespace MedClinic
         {
             Uname.Text = UsersDataGrid.SelectedRows[0].Cells[1].Value.ToString();
             Upass.Text = UsersDataGrid.SelectedRows[0].Cells[2].Value.ToString();
-            Phone.Text = UsersDataGrid.SelectedRows[0].Cells[3].Value.ToString();
+            Uphone.Text = UsersDataGrid.SelectedRows[0].Cells[3].Value.ToString();
 
             if (Uname.Text == "")
             {
@@ -129,7 +131,7 @@ namespace MedClinic
         {
             Uname.Clear();
             Upass.Clear();
-            Phone.Clear();
+            Uphone.Clear();
 
         }
 

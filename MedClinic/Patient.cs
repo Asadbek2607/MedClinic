@@ -21,7 +21,7 @@ namespace MedClinic
         //SAVE BUTTON
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string query = "insert into PatientTable values('"+PatName.Text + "', '" + PatPhone.Text + "', '" + PatAddress.Text + "','" + PatDistrict.SelectedItem.ToString() + "','" + Service.SelectedItem.ToString() + "')";
+            string query = "insert into PatientTable values('"+PatName.Text + "', '" + PatAddress.Text + "', '" + PatDistrict.SelectedItem.ToString()+ "','" + PatPhone.Text + "','" + Service.SelectedItem.ToString() + "')";
             MyPatient Pat = new MyPatient();
             try
             {
@@ -36,18 +36,51 @@ namespace MedClinic
                 MessageBox.Show(Ex.Message);
             }
         }
+       
+
+        // EDIT BUTTON
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            MyPatient Pat = new MyPatient();
+            if (key == 0)
+            {
+                MessageBox.Show("Select the Patient");
+            }
+            else
+            {
+                try
+                {
+                    string query = "Update PatientTable set PatName ='" + PatName.Text + "'," +
+                        "PatAddress ='" + PatAddress.Text + "'," +
+                        "PatDistrict = '" + PatDistrict.SelectedItem.ToString() + "'," +
+                        "PatPhone ='" + PatPhone.Text + "'," +
+                        "Service ='" + Service.SelectedItem.ToString() + "' where PatId=" + key + "";
+
+                    Pat.DeletePatient(query);
+                    MessageBox.Show("Patient Successfully Updated");
+                    populate();
+                    clearForm();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
         void populate()
         {
             MyPatient Pat = new MyPatient();
-            string query = "select PatName,PatPhone,PatAddress,PatDistrict,Service from PatientTable";
+            string query = "select * from PatientTable";
             DataSet ds = Pat.ShowPatient(query);
             PatientDataGrid.DataSource = ds.Tables[0];
         }
         private void Patient_Load_1(object sender, EventArgs e)
         {
-           
+
             populate();
         }
+
         int key = 0;
 
 
@@ -56,10 +89,12 @@ namespace MedClinic
         {
             PatName.Text = PatientDataGrid.SelectedRows[0].Cells[1].Value.ToString();
             PatPhone.Text = PatientDataGrid.SelectedRows[0].Cells[2].Value.ToString();
-            PatAddress.Text = PatientDataGrid.SelectedRows[0].Cells[3].Value.ToString();
-            PatDistrict.Text = PatientDataGrid.SelectedRows[0].Cells[4].Value.ToString();
+            PatDistrict.Text = PatientDataGrid.SelectedRows[0].Cells[3].Value.ToString();
+            PatAddress.Text = PatientDataGrid.SelectedRows[0].Cells[4].Value.ToString();
             Service.Text = PatientDataGrid.SelectedRows[0].Cells[5].Value.ToString();
-            
+           
+
+
             if (PatName.Text == "")
             {
                 key = 0;
@@ -114,31 +149,7 @@ namespace MedClinic
         }
 
 
-        // EDIT BUTTON
-        private void editButton_Click(object sender, EventArgs e)
-        {
-            MyPatient Pat = new MyPatient();
-            if (key == 0)
-            {
-                MessageBox.Show("Select the Patient");
-            }
-            else
-            {
-                try
-                {
-                    string query = "Update PatientTable set PatName ='"+PatName.Text+ "',PatAddress ='" + PatAddress.Text + "',PatPhone ='" + PatPhone.Text + "',Service ='" + Service.SelectedItem.ToString() + "',PatDistrict ='" + PatDistrict.SelectedItem.ToString() + "' where PatId="+key+"";
-
-                    Pat.DeletePatient(query);
-                    MessageBox.Show("Patient Successfully Updated");
-                    populate();
-                    clearForm();
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message);
-                }
-            }
-        }
+       
 
        public void HomePage()
         {

@@ -210,17 +210,17 @@ namespace MedClinic
             "Dentist",
             "Optician",
             "School / Nursery"});
-            Service.SelectedIndex = 0;
+            Service.SelectedIndex= 0;
             this.Service.Location = new System.Drawing.Point(487, 125);
             this.Service.Name = "Service";
             this.Service.Size = new System.Drawing.Size(181, 33);
             this.Service.TabIndex = 17;
-            this.Service.Text = "Dentist";
             // 
             // PatDistrict
             // 
             this.PatDistrict.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatDistrict.FormattingEnabled = true;
+         
             this.PatDistrict.Items.AddRange(new object[] {
             "Chilanzar",
             "Yunusobod",
@@ -230,7 +230,6 @@ namespace MedClinic
             this.PatDistrict.Name = "PatDistrict";
             this.PatDistrict.Size = new System.Drawing.Size(181, 33);
             this.PatDistrict.TabIndex = 16;
-            this.PatDistrict.Text = "Yunusobod";
             // 
             // PatPhone
             // 
@@ -341,6 +340,7 @@ namespace MedClinic
             this.PatientDataGrid.GridColor = System.Drawing.Color.White;
             this.PatientDataGrid.Location = new System.Drawing.Point(257, 236);
             this.PatientDataGrid.Name = "PatientDataGrid";
+          
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

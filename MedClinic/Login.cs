@@ -26,7 +26,7 @@ namespace MedClinic
         private void loginButton_Click(object sender, EventArgs e)
         {
             SqlConnection Con = new SqlConnection();
-            Con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kenjabaev\Documents\ClinicDB.mdf;Integrated Security=True;Connect Timeout=30";
+            Con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\demo\Software\MedClinicDb.mdf;Integrated Security=True;Connect Timeout=30";
           
             string query = "Select * from UserTable where Uname = '" + UidTable.Text + "' and Upass =  '" + PassTable.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
